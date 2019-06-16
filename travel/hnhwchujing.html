@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0px;
+			 padding: 0px;
+			 list-style: none;
+			 text-decoration: none;}
+			  
+			#top{width: 100%;height: 180px;/*background:red;*/}
+			#top .head{width: 100%;height: 30px;
+			          background:#E0E0E0;}
+			#top .head a{color: #666;
+			             font-family: "微软雅黑";
+			             font-size: 16px;
+			             line-height: 30px;}
+			#top .head a:hover{color: deeppink;}
+			#top .head span{float: right;margin-right: 30px;color: #666;font-weight: 800}
+			#top .head span a{font-weight: 800;margin: 0 10px;}            
+			
+			#topHead{width: 100%;height: 100px;/*background: yellow;*/}
+			#topHead .logo{width: 292px;height: 60px;padding-top: 15px;float: left;}
+			#topHead .topSearch{width: 450px;height: 50px;/*background: blue;*/float: left;position: relative;left: 150px;top:17px;border: 2px solid deeppink;}
+			#topHead .topSearch span.text{width: 100px;height: 49px;background: #EAEAEA;line-height: 48px;
+											position: absolute;text-align: center;bottom: 0px;}
+			#topHead .topSearch span.text li{width: 100px;height: 30px;background: #EAEAEA;
+											bottom:1px solid #C9C9C9;line-height: 30px;display: none;
+											opacity: 0.8;}
+			#topHead .topSearch span.text input.shuru{float: left;position: absolute;left: 101px;top: 0px;outline:0px;/*去掉input的边框*/width:350px;height: 46px;
+											-moz-appearance: none;border: 0px solid deeppink;
+											text-indent: 10px;line-height: 45px;color: #666;}
+			#topHead .topSearch span.text a{color: #666;font-size: 16px;}
+			#topHead .topSearch span.text a:hover{color: #DB7093;}
+			#topHead .topSearch input.sosuo{width: 100px;height: 52px;float: right;
+											position:absolute;left: 452px;
+											top: 0px;
+											margin-top: -2px;
+											border: 2px solid deeppink;
+											color: white;
+											background: deeppink;
+											font-size: 18px;
+										
+											}
+			#topHead .hot_s{height: 20px;/*border: 1px solid black;*/margin-top: 58px;}
+			#topHead .hot_s a{color: #666;font-size: 16px;font-family: "微软雅黑";padding: 5px;}
+			#topHead .topTel{width: 266px;height: 60px;float: right;margin: 20px;}
+			#banner{height: 50px;background:deeppink;}
+			
+			/*banner开始*/
+			
+			#banner .nav{width: 520px;height: 50px;/*background: yellow;*/}
+			#banner .nav ul.big_nav{width: 600px;height: 50px;}
+			#banner .nav ul.big_nav li{float: left;/*border: 1px solid blue;*/padding: 0px 30px;
+										line-height: 50px;}
+		    #banner .nav ul.big_nav li a{color: #fff;font-size: 16px;font-weight: bold;}
+		    #banner .nav ul.big_nav li a:hover{color: #E1E1E1;text-decoration: underline;}
+		    /*头部结束*/
+		    #weizhi{width: 100%;height: 50px;/*border: 1px solid blue;*/color: #666;font-size: 16px;
+		   			line-height: 50px;}
+		    #weizhi a{color: #666;font-size: 16px;}
+		    #weizhi a:hover{color: deeppink;}
+		      /*content开始*/
+		    #content{width: 1500px;height: 240px;margin: 0 15px;}
+		    #content .content_one{height: 60px;background: #EEEEEE;}
+		    #content .content_one span.leixing{font-size: 18px;font-family: "微软雅黑";font-weight: bold;color: deeppink;line-height: 60px;margin: 0 10px;}
+		    #content .content_one a{font-size: 16px;font-family: "微软雅黑";color: #666;line-height: 60px;margin: 0 15px;padding: 5px 5px;}
+			#content .content_one a:hover{color: palevioletred;}
+			#content .content_one a.current{background: #B80064;color: #fff;}
+			
+		    #content .content_two{height: 60px;background: #EEEEEE;}
+		    #content .content_two span.leixing{font-size: 18px;font-family: "微软雅黑";font-weight: bold;color: deeppink;line-height: 60px;margin: 0 10px;}
+		    #content .content_two a{font-size: 16px;font-family: "微软雅黑";color: #666;line-height: 60px;margin: 0 15px;padding: 5px 5px;}
+			#content .content_two a:hover{color: palevioletred;}
+			#content .content_two a.current{background: #B80064;color: #fff;}
+			
+			#content_three{height: 80px;}
+			#content_three li.diyihang{background: #EEEEEE;}
+		    #content_three li.diyihang span.leixing{display:block;font-size: 18px;font-family: "微软雅黑";font-weight: bold;color: deeppink;margin: 0 10px;}
+		    #content_three li.diyihang span.leixing a{font-size: 16px;font-family: "微软雅黑";font-weight:normal;color: #666;line-height: 60px;margin: 0 15px;padding: 5px 5px;}
+		    #content_three li.diyihang span.leixing a:hover{color: palevioletred;}
+		    #content_three li.diyihang span.leixing a.current{background: #B80064;color: #fff;}
+		    #content_three #more{color: deeppink;font-size: 16px;border: none;background: #EEEEEE;}
+		    #content_three #pack{color: deeppink;font-size: 16px;border: none;background: #EEEEEE;}
+		    #content_three li.diyihang p.xianshi{height: 95px;background: #EEEEEE;display: none;}
+		    #content_three li.diyihang p.xianshi a{font-size: 16px;font-family: "微软雅黑";color: #666;line-height:41px;margin:0 10px;}
+		    #content_three li.diyihang p.xianshi a:hover{color: palevioletred;}
+		    
+		    #content_three li.rq{background: #EEEEEE;}
+		    #content_three li.rq span.leixing{font-size: 18px;font-family: "微软雅黑";font-weight: bold;color: deeppink;}
+		    #content_three li.rq a{font-size: 16px;font-family: "微软雅黑";color: #666;line-height: 60px;margin: 0 15px;padding: 5px 5px;}
+			#content_three li.rq a:hover{color: palevioletred;}
+			#content_three li.rq a.current{background: #B80064;color: #fff;}
+		   /*content结束*/
+		   /*adv开始*/
+		    #adv{width: 1200px;height: 1000px;border: 1px solid red;margin: 100px 10px 0 10px;}
+			
+		    
+		   
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="top">
+			<div class="head">
+				<img src="img/top-bq-scicon.jpg"align="absmiddle" />&nbsp;<a href="#">湖南海外旅游官网</a> &nbsp;&nbsp;<img src="img/top-bq-qhicon.jpg" align="absmiddle"/>
+				<span><a href="#">登录</a><img src="img/ico_line.png" align="absmiddle"/> <a href="#">注册</a>您好，欢迎来到湖南海外旅游！&nbsp;&nbsp;</span>
+			</div>
+		<!--
+           头部信息开始--logo
+        -->
+		<div id="topHead">
+			<div class="logo">
+				<a href="index.html"><img/ src="img/top-logo.jpg"></a>
+			</div>
+			
+			<div class="topSearch">
+				<span class="text">
+					<a href="#">所有产品&nbsp;<img src="img/cjynysjcdgd.png" align="absmiddle"/></a>
+				<ul>
+					<li class="fangshi"><a href="#">自由行</a></li>
+					<li class="fangshi"><a href="#">包机</a></li>
+				</ul>
+				<input type="text" class="shuru" value="请输入内容" />
+				</span>
+				<div class="hot_s">
+					<a href="#">泰国</a>
+					<a href="#">日本</a>
+					<a href="#">澳洲</a>
+					<a href="#">普吉岛</a>
+					<a href="#">德国</a>
+					<a href="#">三亚</a>
+					<a href="#">台湾</a>
+				</div>
+				<input type="submit" class="sosuo" value="搜索" />
+			</div>
+			
+			<div class="topTel">
+				<img src="img/top-phone.jpg" />
+			</div>
+		</div>
+		<!--
+           头部信息结束
+        -->
+		
+		<!--
+           banner开始
+        -->
+        <div id="banner">
+           <div class="nav">
+           	<ul class="big_nav">
+           		<li><a href="#">首页</a></li>
+           		<li><a href="#">出境游</a></li>
+           		<li><a href="#">国内游</a></li>
+           		<li><a href="#">特价游</a></li>
+           		<li><a href="#">签证</a></li>
+           		
+           	</ul>
+           	
+           </div>
+        
+        	
+        </div>
+		
+		</div>
+		<!--网站头部结束-->
+		<div id="weizhi">
+		   <img src="img/drlybticon.png" align="absmiddle" /> 你现在所在的位置：&nbsp;<a href="index.html" title="首页">首页</a>
+		   &gt;出境游
+		</div>
+		
+		<!--content开始-->
+		<div id="content">
+			<div class="content_one">
+				
+					<span class="leixing">产品类型</span>
+					
+					<a href="#">全部</a>
+					<a href="#">国内游</a>
+					<a href="#" class="current">出境游</a>
+					<a href="#">包机</a>
+					<a href="#">周边游</a>
+					<a href="#">海岛</a>
+					<a href="#">游学</a>
+					<a href="#">签证</a>
+					
+				</div>
+				
+			<div class="content_two">
+				
+					<span class="leixing">行程天数</span>
+					
+					<a href="#" class="current">全部</a>
+					<a href="#">1-5天</a>
+					<a href="#">5-10天</a>
+					<a href="#">10-15天</a>
+					<a href="#">15-20天</a>
+					<a href="#">20-25天</a>
+					<a href="#">25-30天</a>
+					
+			</div>
+			
+			<ul id="content_three">
+					<li class="diyihang">
+						<span class="leixing">目的地
+						<a href="#" class="current">全部</a>
+						<a href="#">海岛</a>
+						<a href="#">台湾</a>
+						<a href="#">泰新马</a>
+						<a href="#">欧洲</a>
+						<a href="#">奥斯</a>
+						<a href="#">美国</a>
+						<a href="#">迪拜</a>
+						<a href="#">港澳</a>
+						<a href="#">南北极</a>
+						<a href="#">泰国</a>
+						<a href="#">新加坡</a>
+						<a href="#">日本</a>
+						<a href="#">越柬挝</a>
+						<a href="#">越南</a>
+						<a href="#"><input type="button" id="more" value="更多﹀" />
+						
+						 </span>
+					 	
+						 <p class="xianshi">
+							<a href="#">老挝</a>
+				        	<a href="#">缅甸</a>
+				        	<a href="#">菲律宾</a>
+				        	<a href="#">香港</a>
+				        	<a href="#">澳门</a>
+				        	<a href="#">印尼</a>
+				        	<a href="#">印度</a>
+				        	<a href="#">尼泊尔</a>
+				        	<a href="#">中东非</a>
+				        	<a href="#">肯尼亚</a>
+				        	<a href="#">南非</a>
+				        	<a href="#">埃及</a>
+				        	<a href="#">约旦</a>
+				        	<a href="#">以色列</a>
+				        	<a href="#">突尼斯</a>
+					        <a href="#">摩洛哥</a>
+					        <a href="#">美加</a>
+					        <a href="#">加拿大</a>
+					        <a href="#">澳大利亚</a>
+					        <a href="#">新西兰</a>
+					        <a href="#">俄罗斯</a><br />
+					        <a href="#">英国</a>
+					        <a href="#">法国</a>
+					        <a href="#">意大利</a>
+					        <a href="#">土耳其</a>
+					        <a href="#">瑞士</a>
+					        <a href="#">德国</a>
+					        <a href="#">荷兰</a>
+					        <a href="#">奥地利</a>
+					        <a href="#">瑞典</a>
+					        <a href="#">芬兰</a>
+				        	<a href="#">波兰</a>
+				        	<a href="#">西班牙</a>
+				            <a href="#">葡萄牙</a>
+				        	<a href="#">希腊</a>
+				        	<a href="#">捷克</a>
+				        	<a href="#">波兰</a>
+				        	<a href="#">南美</a>
+				        	<a href="#">巴西</a>
+				        	<a href="#">阿根廷</a>
+				        	<a href="#">台湾</a>
+				        	<a href="#">普吉岛</a>
+				        	<a href="#">巴厘岛</a><br />
+				        	<a href="#">南极</a>
+				        	<a href="#">美娜多</a>
+				        	<a href="#">法国</a>
+				        	<a href="#">芽庄</a>
+							<a href="#">北极</a>
+				        	<a href="#">湖南</a>
+							<a href="#">苏梅岛</a>
+							<a href="#"><input type="button" id="pack" value="收起︿" />
+							
+					        </p>
+					         </li>
+					        <li class="rq">
+					        	<span class="leixing">出发日期</span>
+					        	<a href="#" class="current">全部</a>
+								<a href="#">1月</a>
+								<a href="#">2月</a>
+								<a href="#">3月</a>
+								<a href="#">4月</a>
+								<a href="#">5月</a>
+								<a href="#">6月</a>
+								<a href="#">7月</a>
+								<a href="#">8月</a>
+								<a href="#">9月</a>
+								<a href="#">10月</a>
+								<a href="#">11月</a>
+								<a href="#">12月</a>
+								
+					        	</li>   
+					       
+					        
+					        
+					      
+					
+					 
+			</ul>
+		
+		</div>
+		<!--content结束-->
+		
+		<!--adv开始-->
+		<div id="adv">
+			
+			
+		</div>
+		
+		
+		
+		<!--adv结束-->
+		
+		
+		
+		
+		
+	</body>
+	<script src="js/jquery3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$("#topHead .topSearch span.text a").mouseenter(function(){
+				
+				$("span.text>ul>li").show();
+				
+			});
+			
+			$("#topHead .topSearch span.text a").mouseleave(function(){
+				
+				$("span.text>ul>li").hide();
+			
+			});
+			
+			//输入框
+			//获取焦点时
+			var value = $("#topHead .topSearch span.text input.shuru").val();
+			$("#topHead .topSearch span.text input.shuru").focus(function(){
+				if($(this).val()==value){
+					$(this).val("");
+				}
+	
+			});
+			//失去焦点时
+			$("#topHead .topSearch span.text input.shuru").blur(function(){
+				if($(this).val()==""){//判断，如果内容为空，就赋值给他初值
+					$(this).val(value);
+				}
+				
+			});
+			
+			//展开收起
+			$("#more").click(function(){
+				
+				$("#content_three .diyihang p.xianshi").slideDown(200);
+				//alert("123")
+				$("#pack").show();
+				
+			});
+			$("#pack").click(function(){
+				
+				$("#content_three .diyihang p.xianshi").slideUp(200);
+				$("#pack").hide();
+			});
+			
+		});
+		
+		
+	</script>
+	
+	
+</html>

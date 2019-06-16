@@ -1,0 +1,154 @@
+
+		*{
+			margin:0px;
+			padding: 0px;
+			
+		}
+		#Top{width:100%px;height:180px;/*background: black;*/}
+		#Top .head{100%px;height:30px;
+		line-height:30px;/*加上一个行高，与构建的div区块的高度一致，使文字在垂直方向居中*/background:#E0E0E0;
+		font-size:16px;font-family:"微软雅黑";
+		color:#666;}
+		#Top .head span{color:palevioletred;font-weight: bold;/*border: 1px solid red;*/
+		padding: 0px 5px;}
+		#Top .head a{color:#666;font-weight: 800;/*数字也是可以表示加粗*//*border:1px solid red;*/
+		padding:0px 20px;
+		text-decoration: none;/*去掉下划线*/float:right;}
+		#Top .head a:hover{color:palevioletred;}/*鼠标放上去的颜色*/
+		/*#Top .head a:visited{color:red;}*/
+		
+		
+		/*通过调整内边距来控制文字与前后的间距*margin：0px auto表示上下为0，左右居中，内边距一样/
+		/*导航栏需要在垂直方向居中，使用行高line-height*/
+		/*构建一个长方形的区块,为了保证浏览器的兼容*{margin:0px;padding: 0px;}
+		在构建一个长方形，添加背景颜色，写头部信息*/
+		/*控制文字的颜色，大小，控制文字和图片的垂直方向居中：align：absmiddle绝对居中*/
+		/*单独控制某些文字的颜色,加上span标签,并控制它里面文字的颜色*/
+		#header{width:100%;height: 100px;/*background: red;*/}
+		#header .logo{width: 292px;height: 45px;/*background: yellow;*/float:left;padding-top: 15px;}
+		#header .banner{width:450px;height: 95px;/*background: purple;*/float:left;line-height: 95px;
+		font-size:16px;font-family: "微软雅黑";/*由于首页距离logo的距离不够宽，我们在这个外边的盒子里面在增加左边内边距*/padding-left: 220px;}
+		#header .search{width:266px;height: 45px;/*background: blue;*/float:right;padding-top:18px;position: relative;/*search 这个大盒子位置相对不动里面两个input盒子绝对定位保证兼容*/}
+		/*构建header长方形，设置三个小长方形在水平方向上两个往左，一个往右，左边的就左浮动，右边的右浮动*/
+		#header .banner a{color:#666;text-decoration: none;font-weight: bold;
+		/*border: 1px solid red;*/padding: 0px 20px;float: left;/*一旦用了浮动，他会继承父元素的高度和宽度*/}
+		#header .banner a:hover{color:palevioletred}
+		/*制作导航还可以用ul标签*/
+		#header .search input.txt{
+		width:145px;height: 25px;
+		border: 1px solid #e1e1e1;color: #999;font-size: 12px;
+		text-indent:10px;position:absolute;left: 0px;top:35px;/*设置它与上边的距离18，与左边距离0*/}
+	    #header .search input.btn{width:26px;height: 28px;background: url("../img/icon_serach.png");
+	         border: 0px;position: absolute;left:146px;top:35px;/*按钮距离左边的距离就是上面文本框的距离加上左右边距，但是会重叠，减去一个边距1即可*/}
+	         
+	         
+	      /*栏目导航开始*/                      
+	    #Nav{
+	    	width: 100%;height: 50px;
+	    	background:deeppink;
+	    	margin: 0px auto;/*将盒子设置为水平方向居中*/    
+	  
+	    }    
+	    #Nav .mainNav{
+	    	
+	    	width: 550px;height: 50px;/*background: red;*/
+	    	float: left;
+	        padding-left: 50px;
+	        font-size: 16px;font-family: "微软雅黑";color: #fff;
+	        text-align: center;/*文字在当前的区块内水平居中*/ 
+	    	line-height: 50px;
+	    }
+	    #Nav .smallNav{
+	    	width: 350px;height: 50px;/*background: yellow;*/
+	    	float: right;
+	    }
+	    #Nav .mainNav ul li{
+	    	
+	    list-style-type:none;/*去掉原点*/
+	   width: 100px;height: 50px;/*border: 1px solid black;*/
+	   float: left;
+	   position: relative;
+	    }
+	    #Nav .mainNav ul li a{
+	    	color: #fff;
+	    	text-decoration: none;  }	
+	    #Nav .mainNav ul li a:hover{color:#363636;}
+	    #Nav .mainNav ul li .secondmenu
+	    {
+	    	width: 350px;/*height: 300px;将高度注释掉，使二级菜单的高度随内容多少自定义*/
+	    	border: 2px solid hotpink;
+	    	position: absolute;/*绝对定位一定要有参考物，这个的参考物就是外面的元素li,所以我们需要将上面的li进行相对定位*/
+	    	background: #fff;
+	    	filter:Alpha(opacity=80); -moz-opacity: 0.8; opacity:0.8;/*设置背景透明*/
+	    	border-top: 0px;
+	    	left:0px;top:50px;/*它距离li元素左边还有上边的距离*/
+	    	display:none;/*隐藏当前对象*/
+	    	padding: 15px;
+	    	z-index: 1;/*导航出不来被图片遮住了，是因为她的z-index没有大于图片的-index，图片没有设置z-index默认为0，图层的位置关系*/
+	    
+	    }
+	    #Nav .mainNav ul li.hover{background:#B80064;}
+	    #Nav .mainNav ul li p{color: #666666;text-align: left;line-height: 35px;border-bottom: 1px dotted #999999;}
+	    #Nav .mainNav ul li p span{font-weight: bold;}                      
+        #Nav .mainNav ul li p a{color: #666666;}
+        #Nav .mainNav ul li p a:hover{color: hotpink;}
+        
+        #Nav .smallNav{color: #fff;font-size:16px;font-family: "微软雅黑";line-height: 50px;}
+        #Nav .smallNav a{text-decoration: none;color: #fff;/*border:1px solid red;*/float: left;padding:0px 15px;}
+        #Nav .smallNav a:hover{color: #363636;text-decoration: underline;/*鼠标画上去的时候添加下划线*/}
+        
+        #Adv{width: 100%;height: 519px;/*background: red;*/position: relative;}
+        #Adv .ImgList{width:100%;height: 519px;position: absolute;/*他们是相对于外面的盒子进行绝对定位的，子元素相对于父元素进行绝对定位*/
+       left: 0px;top: 0px;/*让他距离他的副本左边距离为0，上面也是，为了保证浏览器的兼容*/}
+       #Adv ul.button li{width: 50px;height: 12px;background: black;border: 1px dashed #fff;float: left;
+       list-style-type: none;margin: 0px 5px;/*盒子鱼盒子之间的距离，外边距，上下为0，左右设置距离*/}
+        /*这个li在ul里面，我们对ul进行位置的移动，他也是相对于外面的大盒子进行定位的,这个ul的宽度需要粗略的计算，一个button宽50,4个共200，再加上边框8，边距5*2*4=40共248*/
+       #Adv ul.button{/*width: 250px;不要把ul的宽度固定死，让他自适应，保证浏览器的兼容，改变他的展示方式*/height: 12px;/*border: 2px solid blue;*/position: absolute;
+                       left: 43%;bottom: 50px;/*进行绝对定位后，在设置它距左边和底部的距离，用百分比来设置比较合适,偏差不会太大，精准定位还需再套两个div*/
+                      display: inline-block;/*不要把ul的宽度固定死，让他自适应，保证浏览器的兼容，改变他的展示方式,行内块级元素，虽内容自适应*/}
+       #Adv ul.button li.hover{background:#fff;}
+       
+       
+       /*第一部分样式*/
+      #Part1{width: 1160px;height: 570px;/*background: red;*/margin: 30px auto;position: relative;}
+      
+      #Part1 #Part1_Left{width: 477px;height: 527px;/*background: blue;*/border:1px solid #C9C9C9;padding:5px;float: left;position: relative;}
+      #Part1 #Part1_Right{width: 620px;height: 530px;background: url("../img/vl.png") no-repeat,url("../img/vr.png") no-repeat right top;
+      /*因为css文件访问到img,先要出来再进img文件夹,两张图默认叠加到一起，用right top或bottom移到右边*/padding:0px 10px;
+      /*加了20的内边距之后掉了下来，因为他变宽了，590应该减去左右的边距20即可*/ float: right;}
+      
+      #Part1_Left .Part_imgCon{width:477px;height: 465px;/*border: 1px solid blue;*/position: relative;/*相对于这个小盒子做相对定位，然后把多余的隐藏起来*/overflow: hidden;}
+      #Part1_Left .Part_imgCon .scrollImg{height:465px;width:1000%;/*background: black;*/position: absolute;/*这个足够大的盒子绝对定位*/}
+      #Part1_Left .Part_imgCon .scrollImg img{float: left;}
+     /*滚动文字样式*/
+      #Part1_Left ul.scrollingTxt li{list-style-type: none;font-size: 14px;font-family: "微软雅黑";line-height: 35px;}
+      #Part1_Left ul.scrollingTxt{height: 35px;/*文字释放到ul里面的，给ul添加一个高度,高度固定死了只能显示一个li的里面的内容，隐藏超出的*/overflow: hidden;}
+      
+      #Part1_Left ul.scrollImg_button li{width: 40px;height: 12px;background: #3A5FCD;list-style-type: none;border: 1px solid #FFf;
+                                       float: left;margin:0px 5px;}
+     
+      #Part1 #Part1_Left ul.scrollImg_button li.hover{background: palevioletred;}
+      
+      #Part1 #Part1_Right p.biaoti{height: 110px;background: url("../img/biaoti.png") no-repeat right bottom;border-bottom:1px dashed #c9c9c9;}
+      #Part1 #Part1_Right ul.select_btn li{width: 90px;height: 32px;list-style-type: none;float: left;font-family: "微软雅黑";
+                                   font-size: 14px;text-align: center;line-height: 32px;margin:0px 5px;
+                                   background: url("../img/pd1.png") no-repeat right bottom;}
+      #Part1 #Part1_Right ul.select_btn li.hover{background: url("../img/pd2.png") no-repeat right bottom;}
+      #Part1 #Part1_Right ul.select_btn{border-bottom:1px solid #eee;height: 32px;}/*给ul添加底部边框现,出现在上边是因为我们的li进行了浮动，但是我们不能清除浮动，要通过给ul增加高度*/
+      #Part1 #Part1_Right .select_context{height:300px;/*background: red;*/margin-top:20px;overflow: hidden;/*把超出的部分隐藏起来*/}
+      #Part1 #Part1_Right .select_context .select_context1{height: 300px;/*border: 1px solid blue;*/}
+      
+      /*选项卡图片内容*/
+      #Part1_Right .select_context .select_context1 ul.sel_Img li{width: 126px;height:125px;float: left;list-style-type: none;margin: 14px;position: relative;}
+      #Part1_Right .select_context .select_context1 ul.sel_Img li p{/*height:43px;*把这个高度设置为0*/ background-color: rgba(187,14,115,0.7);
+                                      color:#fff;font-size: 12px;font-family: "微软雅黑";padding: 0px 5px;line-height: 20px;position: absolute;left: 0px;
+                                      bottom: 0px;height: 0px;overflow: hidden;}
+     #Part1_Right .select_context1 ul.news li{font-family: "微软雅黑";font-size: 14px;color: #000;line-height: 35px;/*border: 1px solid red;*/
+                                  text-indent: 20px;background: url("../img/circle.png") no-repeat 4px 13px;}
+     #Part1_Right .select_context1 ul.news{padding-top: 12px;}
+     #Part1_Right .select_context1 ul.news li a{color: #000000; text-decoration: none;}
+     #Part1_Right .select_context1 ul.news li a:hover{color: #FF3E96;}
+     #Part1 #Part1_Right .select_context .select_context1 ul.news li span{color: #FF3E96;font-weight:bold;float: right;}
+ 
+
+
